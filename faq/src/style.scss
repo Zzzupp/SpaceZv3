@@ -1,0 +1,288 @@
+$maincolor: white;
+$ubuntu: 'Ubuntu', sans-serif;
+$sans: 'Fira Sans', sans-serif;
+
+
+
+@mixin flex ($display, $direction, $justify, $align){
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 1281px;
+    margin: auto;
+}
+body{
+    header{
+        padding: 26px 0;
+        background-image: url(../img/bg-image-wrapper.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        .social{
+            
+            @include flex(flex, row, space-between, center);
+            .nospace img{
+                margin-right:0;
+            }
+            img{
+                margin-right: 35px;
+            }
+        }
+        .links{
+            @include flex(flex, row, space-between, center);
+            @media (max-width: 773px){
+                margin-bottom: 20px;
+            }
+            .nospace{
+                margin-right:0;
+            }
+            a{
+                text-decoration: none;
+    
+            }
+            p{
+                margin-right: 35px;
+                margin-bottom: 0;
+                color: $maincolor;
+                font-family: $ubuntu;
+                font-weight: 400;
+                line-height: 140%;
+                font-size: 20px;
+                opacity: 80%;
+                &:hover{
+                    opacity: 100%;
+                    border-bottom: 1px solid white;
+                }
+    
+            }
+        }
+        .logo{
+            img{
+    
+                width: 107.56px;
+                height: 59.91px;
+                animation-name: blick;
+                animation-duration: 2s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+            }
+            margin-right: 533px;
+            @media (max-width: 1460px){
+                margin-right: 0px;
+            }
+            @media (max-width: 773px){
+                margin-right: 0px;
+                margin-bottom: 20px;
+            }
+        }
+        .flex-header{
+            @include flex(flex, row, space-between, center);
+            @media (max-width: 773px){
+                @include flex(flex, column, center, center);
+            }
+        }
+        .headerpart{
+            padding-top: 7%;
+            min-height: 95vh;
+            text-align: left;
+            @media (max-width: 500px){
+                padding-bottom: 39px;
+            }
+            .accordion-item{
+                background-color: #671950;
+                color: #fff;
+            }
+            .accordion-button:not(.collapsed){
+                color: #fff;
+            }
+            .accordion-button{
+                background-color: #240d3b;
+                color: white;
+                font-size: 25px;   
+                @media (max-width: 500px){
+                    font-size: 20px !important;
+                }
+
+            }
+            .accordion-button:not(.collapsed)::after{
+                background-image: url(../img/arrow.svg);
+            }
+            .accordion-button::after{
+                background-image: url(../img/arrow.svg);
+            }
+            // .accordion-button::after{
+            //     content: none;
+            // }
+            .accordion-button:focus{
+                     z-index: 3; 
+                     border-color: none;
+                     outline: none; 
+                     box-shadow: none;
+            }
+            .zagolovokac{
+                display: inline-block;
+                margin: auto;
+                text-align: center;
+                padding-bottom: 20px;
+                h2{
+                    color: #fff;
+                    font-family: $ubuntu;
+                    line-height: 155.9%;
+                    font-size: 50px;
+                    font-weight: 500;
+                    color: $maincolor;
+                }
+
+            }
+            .button{
+                
+                a{
+                    padding: 16px 51px;
+                    background: linear-gradient(to top right, #6E227E, #E110C3);
+                    border-radius: 39px;
+                    text-decoration: none;
+                    font-family: $ubuntu;
+                    line-height: 155.9%;
+                    font-size: 30px;
+                    font-weight: 500;
+                    color: $maincolor;
+                    transition: 1s;
+                    &:hover{
+                        background: linear-gradient(to bottom left, #6E227E, #E110C3);
+                    }
+                    @media (max-width: 370px){
+                        font-size: 20px;
+                    }
+                }
+            }
+            .ltltext{
+                    color: #E110C3;
+                    line-height: 155.9%;
+                    font-family: $ubuntu;
+                    font-size: 19px;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    @media (max-width: 441px){
+                        font-size: 15px;
+                    }
+            }
+            h1{
+                font-family: $sans;
+                color: $maincolor;
+                font-size: 106px;
+                letter-spacing: 4.5px;
+                margin-bottom: 13px;
+                font-weight: 700;
+                @media (max-width: 441px){
+                    font-size: 60px;
+                }
+            }
+            .undrh{
+                line-height:155.9%;
+                font-family: $ubuntu;
+                color: $maincolor;
+                font-size: 24px;
+                margin-bottom: 76px;
+                @media (max-width: 441px){
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+    footer{
+        padding: 63px 0;
+        background-color: #8C04A8;
+        .footer-wrapper{
+            @include flex(flex, row, space-between, center);
+            @media (max-width: 778px){
+                @include flex(flex, column, center, center);
+            }
+        }
+        .footer-logo{
+            @include flex(flex, row, space-between, center);
+            @media (max-width: 778px){
+                @include flex(flex, column, center, center);
+                margin-bottom: 15px;
+            }
+            img{
+                margin-right: 46px;
+                @media (max-width: 778px){
+                    margin-right: 0;
+                }
+                
+            }
+            p{
+                color: $maincolor;
+                text-transform: uppercase;
+                font-size: 25px;
+                font-family: $ubuntu;
+                font-weight: 500;
+            }
+        }
+        .footer-contact{
+            @include flex(flex, row, space-between, center);
+            @media (max-width: 778px){
+                @include flex(flex, column, center, center);
+            }
+            .footercntct{
+                @media (max-width: 778px){
+                    margin-bottom: 5px;
+                }
+            }
+            a{
+                text-decoration: none;
+            }
+            p{
+                margin-right: 42px;
+                color: $maincolor;
+                font-size: 25px;
+                font-family: $ubuntu;
+                font-weight: 500;
+                @media (max-width: 778px){
+                    margin-right: 0;
+                }
+                &:hover{
+                    opacity: 100%;
+                    border-bottom: 1px solid white;
+                }
+    
+            }
+            .nospace{
+                margin-right: 0;
+            }
+            img{
+                margin-right: 30px;
+    
+            }
+    
+        }
+        text-align: center;
+        p{
+            margin-bottom: 0;
+        }
+    
+    }
+}
+
+@keyframes blick {
+    0% {
+        opacity: 0.01;
+    }
+  
+    50% {
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0.01;
+    }
+  }

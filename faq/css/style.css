@@ -1,0 +1,480 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1281px;
+  margin: auto;
+}
+
+body header {
+  padding: 26px 0;
+  background-image: url(../img/bg-image-wrapper.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body header .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .social .nospace img {
+  margin-right: 0;
+}
+
+body header .social img {
+  margin-right: 35px;
+}
+
+body header .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 773px) {
+  body header .links {
+    margin-bottom: 20px;
+  }
+}
+
+body header .links .nospace {
+  margin-right: 0;
+}
+
+body header .links a {
+  text-decoration: none;
+}
+
+body header .links p {
+  margin-right: 35px;
+  margin-bottom: 0;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  line-height: 140%;
+  font-size: 20px;
+  opacity: 80%;
+}
+
+body header .links p:hover {
+  opacity: 100%;
+  border-bottom: 1px solid white;
+}
+
+body header .logo {
+  margin-right: 533px;
+}
+
+body header .logo img {
+  width: 107.56px;
+  height: 59.91px;
+  -webkit-animation-name: blick;
+          animation-name: blick;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@media (max-width: 1460px) {
+  body header .logo {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 773px) {
+  body header .logo {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+body header .flex-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 773px) {
+  body header .flex-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body header .headerpart {
+  padding-top: 7%;
+  min-height: 95vh;
+  text-align: left;
+}
+
+@media (max-width: 500px) {
+  body header .headerpart {
+    padding-bottom: 39px;
+  }
+}
+
+body header .headerpart .accordion-item {
+  background-color: #671950;
+  color: #fff;
+}
+
+body header .headerpart .accordion-button:not(.collapsed) {
+  color: #fff;
+}
+
+body header .headerpart .accordion-button {
+  background-color: #240d3b;
+  color: white;
+  font-size: 25px;
+}
+
+@media (max-width: 500px) {
+  body header .headerpart .accordion-button {
+    font-size: 20px !important;
+  }
+}
+
+body header .headerpart .accordion-button:not(.collapsed)::after {
+  background-image: url(../img/arrow.svg);
+}
+
+body header .headerpart .accordion-button::after {
+  background-image: url(../img/arrow.svg);
+}
+
+body header .headerpart .accordion-button:focus {
+  z-index: 3;
+  border-color: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body header .headerpart .zagolovokac {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+body header .headerpart .zagolovokac h2 {
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 155.9%;
+  font-size: 50px;
+  font-weight: 500;
+  color: white;
+}
+
+body header .headerpart .button a {
+  padding: 16px 51px;
+  background: -webkit-gradient(linear, left bottom, right top, from(#6E227E), to(#E110C3));
+  background: linear-gradient(to top right, #6E227E, #E110C3);
+  border-radius: 39px;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+  line-height: 155.9%;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+body header .headerpart .button a:hover {
+  background: -webkit-gradient(linear, right top, left bottom, from(#6E227E), to(#E110C3));
+  background: linear-gradient(to bottom left, #6E227E, #E110C3);
+}
+
+@media (max-width: 370px) {
+  body header .headerpart .button a {
+    font-size: 20px;
+  }
+}
+
+body header .headerpart .ltltext {
+  color: #E110C3;
+  line-height: 155.9%;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+@media (max-width: 441px) {
+  body header .headerpart .ltltext {
+    font-size: 15px;
+  }
+}
+
+body header .headerpart h1 {
+  font-family: "Fira Sans", sans-serif;
+  color: white;
+  font-size: 106px;
+  letter-spacing: 4.5px;
+  margin-bottom: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 441px) {
+  body header .headerpart h1 {
+    font-size: 60px;
+  }
+}
+
+body header .headerpart .undrh {
+  line-height: 155.9%;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 76px;
+}
+
+@media (max-width: 441px) {
+  body header .headerpart .undrh {
+    font-size: 17px;
+  }
+}
+
+body footer {
+  padding: 63px 0;
+  background-color: #8C04A8;
+  text-align: center;
+}
+
+body footer .footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 778px) {
+  body footer .footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+body footer .footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 778px) {
+  body footer .footer-logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px;
+  }
+}
+
+body footer .footer-logo img {
+  margin-right: 46px;
+}
+
+@media (max-width: 778px) {
+  body footer .footer-logo img {
+    margin-right: 0;
+  }
+}
+
+body footer .footer-logo p {
+  color: white;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+body footer .footer-contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 778px) {
+  body footer .footer-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 778px) {
+  body footer .footer-contact .footercntct {
+    margin-bottom: 5px;
+  }
+}
+
+body footer .footer-contact a {
+  text-decoration: none;
+}
+
+body footer .footer-contact p {
+  margin-right: 42px;
+  color: white;
+  font-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 778px) {
+  body footer .footer-contact p {
+    margin-right: 0;
+  }
+}
+
+body footer .footer-contact p:hover {
+  opacity: 100%;
+  border-bottom: 1px solid white;
+}
+
+body footer .footer-contact .nospace {
+  margin-right: 0;
+}
+
+body footer .footer-contact img {
+  margin-right: 30px;
+}
+
+body footer p {
+  margin-bottom: 0;
+}
+
+@-webkit-keyframes blick {
+  0% {
+    opacity: 0.01;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.01;
+  }
+}
+
+@keyframes blick {
+  0% {
+    opacity: 0.01;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.01;
+  }
+}
+/*# sourceMappingURL=style.css.map */
